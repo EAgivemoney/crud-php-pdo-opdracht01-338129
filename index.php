@@ -12,9 +12,14 @@
     <p>Uw telefoonnummer:</p>
     <input type="tel" name="" id="">
     <p>Uw e-mailadres:</p>
-    <input type="email" name="" id="">
+    <input type="email" name="randomguy@nowhere.com" id="">
     <p>Afspraak datum:</p>
     <input type="datetime-local" name="" id="">
     <p>Soort behandeling:</p>
+    <input type="checkbox" name="" id=""> Nagelbijt arrangement (termijnbetaling mogelijk) €180<br>
+    <input type="checkbox" name="" id=""> Luxe manicure (massage en handpakking) €30,00<br>
+    <input type="checkbox" name="" id=""> Nagelreparatie per nagel (in eerste week gratis) €5,00<br>
+    <button type="submit">Sla op</button>
+    <button type="reset">Reset</button>
 </body>
 </html>
