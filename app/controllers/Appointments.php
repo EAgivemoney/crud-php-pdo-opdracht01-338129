@@ -11,21 +11,25 @@ class Appointments extends BaseController
 
     public function index()
     {
-        $appointments = $this->appointmentModel->getCountries();
+        $appointments = $this->appointmentModel->getAppointment();
 
         $dataRows = "";
 
         foreach ($appointments as $appointment) {
             $dataRows .= "<tr>
-                            <td>{$appointment->Name}</td>
-                            <td>{$appointment->CapitalCity}</td>
-                            <td>{$appointment->Continent}</td>
-                            <td>" . number_format($appointment->Population, 0, ",", ".") . "</td>            
+                            <td>{$appointment->Kleur1}</td>
+                            <td>{$appointment->Kleur2}</td>
+                            <td>{$appointment->Kleur3}</td>
+                            <td>{$appointment->Kleur4}</td>
+                            <td>{$appointment->Telefoon_nummer}</td>
+                            <td>{$appointment->Email_adres}</td>
+                            <td>{$appointment->Datum_afspraak}</td> 
+                            <td>{$appointment->Behandeling}</td>       
                         </tr>";
         }
 
         $data = [
-            'title' => 'Landen van de Wereld',
+            'title' => 'Bling Bling Nail Studio Chantal',
             'dataRows' => $dataRows
         ];
 
@@ -50,11 +54,11 @@ class Appointments extends BaseController
                     Uw gegevens zijn opgeslagen. U wordt doorgestuurd naar de index-pagina.
                   </div>';
 
-            header("Refresh:6; url=" . URLROOT . "/countries/index");
+            header("Refresh:6; url=" . URLROOT . "/appointments/index");
         }
 
         $data = [
-            'title' => 'Nieuw land toevoegen'
+            'title' => 'Nieuwe Afspraak'
         ];
 
         $this->view('appointment/create', $data);
