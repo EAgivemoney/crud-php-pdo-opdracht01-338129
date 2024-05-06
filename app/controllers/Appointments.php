@@ -58,9 +58,9 @@ class Appointments extends BaseController
         }
 
         $data = [
-            'title' => 'Nieuwe Afspraak'
+            'title' => 'Nieuwe Afspraak maken'
         ];
 
-        $this->view('appointment/create', $data);
+        $this->view('appointments/create', $data);
     }
 }

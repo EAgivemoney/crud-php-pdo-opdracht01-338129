@@ -52,14 +52,14 @@ class Appointment
 
         $this->db->query($sql);
 
-        $this->db->bind(':kleur1', $postArrayData['country'], PDO::PARAM_STR);
-        $this->db->bind(':kleur2', $postArrayData['country'], PDO::PARAM_STR);
-        $this->db->bind(':kleur3', $postArrayData['country'], PDO::PARAM_STR);
-        $this->db->bind(':kleur4', $postArrayData['country'], PDO::PARAM_STR);
-        $this->db->bind(':telefoonnummer', $postArrayData['country'], PDO::PARAM_STR);
-        $this->db->bind(':emailadres', $postArrayData['capitalCity'], PDO::PARAM_STR);
-        $this->db->bind(':datumafspraak', $postArrayData['continent'], PDO::PARAM_STR);
-        $this->db->bind(':behandeling', $postArrayData['population'], PDO::PARAM_INT);
+        $this->db->bind(':kleur1', $postArrayData['kleur1'], PDO::PARAM_STR);
+        $this->db->bind(':kleur2', $postArrayData['kleur2'], PDO::PARAM_STR);
+        $this->db->bind(':kleur3', $postArrayData['kleur3'], PDO::PARAM_STR);
+        $this->db->bind(':kleur4', $postArrayData['kleur4'], PDO::PARAM_STR);
+        $this->db->bind(':telefoonnummer', $postArrayData['telefoonNummer'], PDO::PARAM_STR);
+        $this->db->bind(':emailadres', $postArrayData['emailAdres'], PDO::PARAM_STR);
+        $this->db->bind(':datumafspraak', $postArrayData['datumAfspraak'], PDO::PARAM_STR);
+        $this->db->bind(':behandeling', $postArrayData['behandeling'], PDO::PARAM_STR);
 
         return $this->db->execute();
     }
