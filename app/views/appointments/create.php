@@ -14,11 +14,21 @@
             <div class="col-6">
                 <form action="<?= URLROOT; ?>/appointments/create" method="post">
                     <div class="mb-3">
-                        <label for="inputNameColors" class="form-label">Kies 4 basiskleuren voor uw nagels:</label>
-                        <input name="kleur1" type="color" class="form-control" id="inputNameColors" placeholder="#ffc0cb"> 
-                        <input name="kleur2" type="color" class="form-control" id="inputNameColors"> 
-                        <input name="kleur3" type="color" class="form-control" id="inputNameColors"> 
-                        <input name="kleur4" type="color" class="form-control" id="inputNameColors">
+                        <div class="col">
+                            <label for="inputNameColors" class="form-label">Kies 4 basiskleuren voor uw nagels:</label>                            
+                        </div>
+                        <div class="col">
+                            <input name="kleur1" type="color" class="form-control" id="inputNameColors">                     
+                        </div>
+                        <div class="col">
+                            <input name="kleur2" type="color" class="form-control" id="inputNameColors">                            
+                        </div>
+                        <div class="col">
+                            <input name="kleur3" type="color" class="form-control" id="inputNameColors">                            
+                        </div>
+                        <div class="col">
+                            <input name="kleur4" type="color" class="form-control" id="inputNameColors">                            
+                        </div>
                     </div>
                     
                     <div class="mb-3">
@@ -37,15 +47,23 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="selectTreatment" class="form-label">Soort behandeling:</label>
-                        <input name="behandeling" type="checkbox" class="form-control" id="selectTreatment"> Nagelbijt arrangement (termijnbetaling mogelijk) €180
-                        <input name="behandeling" type="checkbox" class="form-control" id="selectTreatment"> Luxe manicure (massage en handpakking) €30,00
-                        <input name="behandeling" type="checkbox" class="form-control" id="selectTreatment"> Nagelreparatie per nagel (in eerste week gratis) €5,00
+                        <label class="form-label">Soort behandeling:</label>
+                        <div class="form-check">
+                            <input name="behandeling" type="checkbox" class="form-check-input" id="treatment1"> 
+                            <label class="form-check-label" for="treatment1">Nagelbijt arrangment (termijnbetaling mogelijk) €180</div>                           
+                            <input name="behandeling" type="checkbox" class="form-check-input" id="treatment2">
+                            <label class="form-check-label" for="treatment2">Luxe manicure (massage en handpakking) €30,00</div>       
+                            <input name="behandeling" type="checkbox" class="form-check-input" id="treatment3">
+                            <label class="form-check-label" for="treatment3">Nagelreparatie per nagel (in eerste week gratis) €5,00</div>   
+                        </div>
                     </div>
 
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Sla Op</button>
-                        <button type="reset" class="btn btn-primary">Reset</button>
+                        <div class="col-md-6">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="submit" class="btn btn-primary me-md-4">Sla Op</button>
+                                <button type="reset" class="btn btn-primary ">Reset</button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
