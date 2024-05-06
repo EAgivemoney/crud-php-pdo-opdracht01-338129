@@ -18,19 +18,19 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nailstudio`
+-- Database: `Nailstudio`
 --
-CREATE DATABASE IF NOT EXISTS `nailstudio` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `nailstudio`;
+CREATE DATABASE IF NOT EXISTS `Nailstudio` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `Nailstudio`;
 
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `afspraak`
+-- Tabelstructuur voor tabel `Afspraak`
 --
 
-DROP TABLE IF EXISTS `afspraak`;
-CREATE TABLE IF NOT EXISTS `afspraak` (
+DROP TABLE IF EXISTS `Afspraak`;
+CREATE TABLE IF NOT EXISTS `Afspraak` (
   `Id` int NOT NULL AUTO_INCREMENT,
   `Kleur1` varchar(10) NOT NULL,
   `Kleur2` varchar(10) NOT NULL,
