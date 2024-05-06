@@ -37,7 +37,7 @@ class Appointments extends BaseController
     }
 
     /**
-     * Creates a new country.
+     * Creates a new Appointment.
      *
      * This method is responsible for rendering the create view and passing the necessary data to it.
      *

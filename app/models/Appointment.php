@@ -21,7 +21,8 @@ class Appointment
                           ,Email_adres
                           ,Datum_afspraak
                           ,Behandeling
-                    FROM   Afspraak';
+                    FROM   Afspraak
+                    ORDER BY Datum_afspraak DESC';
 
             $this->db->query($sql);
 
