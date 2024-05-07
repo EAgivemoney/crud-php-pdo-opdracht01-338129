@@ -45,22 +45,30 @@ class Appointments extends BaseController
      */
     public function create()
     {
+        $selectedTreatments = '';
+        $datumAfspraak = '';
+    
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    
+            $selectedTreatments = isset($_POST['behandeling']) ? $_POST['behandeling'] : '';
 
+            $datumAfspraak = isset($_POST['datumAfspraak']) ? $_POST['datumAfspraak'] : '';
+    
             $result = $this->appointmentModel->createAppointment($_POST);
-
+    
             echo '<div class="alert alert-success" role="alert">
                     Uw gegevens zijn opgeslagen. U wordt doorgestuurd naar de index-pagina.
                   </div>';
-
+    
             header("Refresh:6; url=" . URLROOT . "/appointments/index");
         }
-
+    
         $data = [
-            'title' => 'Nieuwe Afspraak maken'
+            'title' => 'Nieuwe Afspraak maken',
+            'selectedTreatments' => $selectedTreatments
         ];
-
+    
         $this->view('appointments/create', $data);
     }
 }

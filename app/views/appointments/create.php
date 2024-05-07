@@ -17,16 +17,16 @@
                         <div class="col">
                             <label for="inputNameColors" class="form-label">Kies 4 basiskleuren voor uw nagels:</label>                            
                         </div>
-                        <div class="col">
+                        <div class="col-3">
                             <input name="kleur1" type="color" class="form-control" id="inputNameColors">                     
                         </div>
-                        <div class="col">
+                        <div class="col-3">
                             <input name="kleur2" type="color" class="form-control" id="inputNameColors">                            
                         </div>
-                        <div class="col">
+                        <div class="col-3">
                             <input name="kleur3" type="color" class="form-control" id="inputNameColors">                            
                         </div>
-                        <div class="col">
+                        <div class="col-3">
                             <input name="kleur4" type="color" class="form-control" id="inputNameColors">                            
                         </div>
                     </div>
@@ -43,17 +43,17 @@
 
                     <div class="mb-3">
                         <label for="inputTimeAppointment" class="form-label">Afspraak datum:</label>
-                        <input name="datumAfspraak" type="datetime-local" class="form-control" id="inputTimeAppointment">
+                        <input name="datumAfspraak" type="datetime-local" class="form-control" id="inputTimeAppointment" value="<?= date('Y-m-d\TH:i'); ?>">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Soort behandeling:</label>
                         <div class="form-check">
-                            <input name="behandeling" type="checkbox" class="form-check-input" id="treatment1"> 
+                            <input name="behandeling" value= "Nagelbijt arrangment" type="checkbox" class="form-check-input" id="treatment1"> 
                             <label class="form-check-label" for="treatment1">Nagelbijt arrangment (termijnbetaling mogelijk) €180</div>                           
-                            <input name="behandeling" type="checkbox" class="form-check-input" id="treatment2">
+                            <input name="behandeling" value= "Luxe manicure" type="checkbox" class="form-check-input" id="treatment2">
                             <label class="form-check-label" for="treatment2">Luxe manicure (massage en handpakking) €30,00</div>       
-                            <input name="behandeling" type="checkbox" class="form-check-input" id="treatment3">
+                            <input name="behandeling" value="Nagelreparatie per nagel" type="checkbox" class="form-check-input" id="treatment3">
                             <label class="form-check-label" for="treatment3">Nagelreparatie per nagel (in eerste week gratis) €5,00</div>   
                         </div>
                     </div>
